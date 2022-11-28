@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="view/master/master.css" />
+    <link rel="stylesheet" href="view/allFlights/flightCard.css" />
+    <link rel="stylesheet" href="view/allFlights/flightCard.css.map" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css1"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="view/master/crud/creat.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="view/allFlights/allFlight.css" />
+    <link rel="stylesheet" href="view/master/user/userTable.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Flights</title>
+  </head>
+  <body>
+    <section class="get-in-touch">
+
+    <h1 class="title2"> Hello manager, what would you like to do?</h1>
+    </section>
+    <div class="container">
+
+    <div class="master-control">
+      <form class="contact-form row">
+
+      <div class="form-field col-lg-12">
+        <input
+          class="submit-btn"
+          type="button"
+          value="See all Flights"
+          onclick="showallFlights()"
+        />
+
+          <input
+            class="submit-btn"
+            type="button"
+            value="Create new Flight"
+            onclick="showCreateFlights()"
+          />
+      <!-- <button type="button" class="master-button" onclick="showallFlights()">
+        See all Flights
+      </button> -->
+      <!-- <button type="button" class="master-button" onclick="showCreateFlights()">
+        Create new Flight
+      </button> -->
+        <input
+          class="submit-btn"
+          type="button"
+          value="Flight update"
+          onclick="showUpdateFlights()"
+        />
+      <!-- <button type="button" class="master-button" onclick="showUpdateFlights()">
+        Flight update
+      </button> -->
+
+        <input
+          class="submit-btn"
+          type="button"
+          value="Delete a Flight"
+          onclick="showDeleteFlights()"
+        />
+        <input
+                class="submit-btn"
+                type="button"
+                value="Flights statistics"
+                onclick="loadGraphs()"
+        />
+        <input
+        class="submit-btn"
+        type="button"
+        value="Users"
+        onclick="showUsers()"
+/>
+      </form >
+      </div>
+      <!-- <button type="button" class="master-button" onclick="showDeleteFlights()">
+        Delete a Flight
+      </button> -->
+      <!-- <button type="button" class="master-button" onclick="showGraphs()">Show stats</button> -->
+      <br><br><br><br><br>
+
+    </div>
+    <div id="search"></div>
+    <div id="main"></div>
+    <div id="create"></div>
+    <div id="update"></div>
+    <div id="delete"></div>
+    <div id="graphs">
+    </div>
+    <div id="users"></div>
+  </body>
+  <footer>
+    <script src="view/master/master.js"></script>
+  </footer>
+</html>

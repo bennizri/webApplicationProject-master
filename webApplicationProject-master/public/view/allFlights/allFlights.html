@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <!-- //////////// -->
+    <link rel="stylesheet" href="view/allFlights/flightCard.css" />
+    <link rel="stylesheet" href="view/allFlights/flightCard.css.map" />
+    <link rel="stylesheet" href="view/cart/cart.css" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- //////////// -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="view/master/crud/creat.css" />
+    <link rel="stylesheet" href="view/allFlights/allFlight.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Flights</title>
+  </head>
+  <body>
+  <!-- <aside>
+      <rev>קצת מילים טובות עלינו</rev>
+      <hr/>
+      <rev>"את הירח דבש שלי מצאתי פה, אל תגידו לאישתי"</rev>
+      <hr/>
+      <rev>"לא משתמש באתר אחר מאז הטיסה שלי מפה"</rev>
+  </aside> -->
+    <section class="get-in-touch">
+      <h1 class="title2">Find your favorite vacation</h1>
+    </section>
+
+   
+    <section class="get-in-touch">
+
+        <h1 class="title">Search your vacation by:</h1>
+        <form class="contact-form row">
+          <div class="form-field col-lg-4">
+            <label for="price">Price</label>
+            <select name="price" id="price">
+              <option value="all">all</option>
+              <option value="cheap">Less than 100$</option>
+              <option value="regular">Between 100$ and 500$</option>
+              <option value="expensive">Over 500$</option>
+            </select>
+          </div>
+          <div class="form-field col-lg-4">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option value="all">all</option>
+              <option value="urban">urban</option>
+              <option value="exotic">exotic</option>
+              <option value="nature">nature</option>
+              <option value="shopping">shopping</option>
+              <option value="sunbathing">sunbathing</option>
+            </select>
+          </div>
+
+          <div class="form-field col-lg-4">
+            <label for="continent">Continent</label>
+             <select name="continent" id="continent">
+            <option value="all">all</option>
+            <option value="asia">asia</option>
+            <option value="africa">africa</option>
+             <option value="northAmerica">northAmerica</option>
+            <option value="southAmerica">soutAmerica</option>
+             <option value="europe">europe</option>
+            </select>
+          </div>
+      
+          <div class="form-field col-lg-16">
+            <input
+              class="submit-btn"
+              type="button"
+              value="Submit"
+              onclick="Search1()"
+            />
+        </div>
+    </form>
+
+        <h1 class="title">Search your vacation by:</h1>
+        <form class="contact-form row">
+          <div class="form-field col-lg-5">
+            <label for="start">Start date:</label>
+    <input
+      type="date"
+      id="start"
+      name="trip-start"
+      value="2022-06-01"
+      min="2022-06-01"
+      max="2024-12-31"
+    />
+          </div>
+          <div class="form-field col-lg-5">
+            <label for="end">End date:</label>
+    <input
+      type="date"
+      id="end"
+      name="trip-end"
+      value="2024-12-31"
+      min="2022-06-01"
+      max="2024-12-31"
+    />
+          </div>
+          <div class="form-field col-lg-5">
+            <label for="temperature">Temperature</label>
+            <select name="temperature" id="temperature">
+              <option value="all">all</option>
+              <option value="cold">Less than 15C</option>
+              <option value="regular">Between 15C and 24C</option>
+              <option value="hot">Over 24C</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field col-lg-5">
+            <label for="duration">Duration</label>
+            <select name="duration" id="duration">
+              <option value="all">all</option>
+              <option value="short">Less than 4 Hours</option>
+              <option value="med">Between 4 Hours and 6 Hours</option>
+              <option value="long">Over 6 Hours</option>
+            </select>
+        </div>
+      
+          <div class="form-field col-lg-16">
+            <input
+              class="submit-btn"
+              type="button"
+              value="Submit"
+              onclick="Search2()"
+            />
+        </div>
+    </form>
+
+    <form class="contact-form row">
+        <div class="form-field col-lg-16">
+            <input
+              class="submit-btn2"
+              type="button"
+              value="Group By Continent"
+              onclick="GroupByContinent()"
+            />
+            <input
+            class="submit-btn2"
+            type="button"
+            value="Group By Category"
+            onclick="GroupByCategory()"
+          />
+        </div>
+        </form>
+
+    </section>
+    <section class="products">
+
+      <div class="products-center"></div>
+    </section>
+  
+    <section class="get-in-touch">
+
+      <form class="contact-form row">
+        <div class="input-group">
+            <div class="form-outline">
+              <input type="search" id="search_flight" class="form-control" />
+              <label class="form-label" for="search_flight"></label>
+            </div>
+            <button type="button" onclick="search_allFlight(document.getElementById('search_flight').value)" class="btn btn-primary">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        <div class="form-field col-lg-6">
+          <label for="cart_id">enter your cart id</label
+          ><input class="input-text js-input" type="text" id="cart_id" value="" />
+        </div>
+      </form>
+
+      </section>
+    <div id="text"></div>
+
+  
+
+    <script src="view/allFlights/allFlights.js"></script>
+  </body>
+  <footer></footer>
+</html>
